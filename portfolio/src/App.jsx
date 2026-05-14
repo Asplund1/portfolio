@@ -161,7 +161,7 @@ function App() {
         </p>
 
         <div className="links">
-          <a href="mailto:180954908+Asplund1@users.noreply.github.com">Email</a>
+          <a href="mailto:asplund_andreas@outlook.com">Email</a>
 
           <a
             href="https://www.linkedin.com/in/ditt-linkedin-namn"
