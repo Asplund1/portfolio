@@ -3,7 +3,7 @@ function Hero() {
     <header className="hero" id="top">
       <p className="eyebrow">Fullstack Developer · Stockholm</p>
 
-      <h1>Building modern web applications from interface to backend.</h1>
+      <h1>Portfolio · Andreas Asplund</h1>
 
       <p className="hero-copy">
         I work primarily with React, TypeScript, Next.js, Node.js and PostgreSQL.
