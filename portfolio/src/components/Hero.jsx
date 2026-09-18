@@ -1,14 +1,14 @@
 function Hero() {
   return (
     <header className="hero" id="top">
-      <p className="eyebrow">Fullstack Developer · Stockholm</p>
+      <p className="eyebrow">Portfolio · Fullstack Developer · Stockholm</p>
 
-      <h1>Portfolio · Andreas Asplund</h1>
+      <h1>Andreas Asplund</h1>
 
       <p className="hero-copy">
-        I work primarily with React, TypeScript, Next.js, Node.js and PostgreSQL.
-        My experience includes an internship at Hitract, a thesis project for
-        Karolinska and independent fullstack projects.
+        I build modern web applications with React, TypeScript, Next.js, Node.js
+        and PostgreSQL. My experience includes an internship at Hitract, a thesis
+        project for Karolinska and independent fullstack projects.
       </p>
 
       <div className="hero-actions">
