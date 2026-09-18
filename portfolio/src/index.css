@@ -95,12 +95,11 @@ main {
 }
 
 .hero {
-  min-height: calc(100vh - 84px);
   max-width: 960px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 88px 0 104px;
+  padding: 88px 0 120px;
 }
 
 .eyebrow {
