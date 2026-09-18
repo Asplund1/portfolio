@@ -14,8 +14,16 @@ export const featuredProjects = [
     ],
     technologies: ["Next.js", "TypeScript", "PostgreSQL"],
     githubUrl: "",
-    visualLabel: "Planning tool",
-    visualItems: ["Requirements", "UI", "Database"],
+    images: [
+      {
+        src: "/images/karolinska-overview.webp",
+        alt: "Overview of the Karolinska production planning tool",
+      },
+      {
+        src: "/images/karolinska-form.webp",
+        alt: "Production input form in the Karolinska planning tool",
+      },
+    ],
   },
   {
     id: "hitract",
@@ -32,8 +40,16 @@ export const featuredProjects = [
     ],
     technologies: ["React", "TypeScript", "Material UI"],
     githubUrl: "",
-    visualLabel: "Admin platform",
-    visualItems: ["KPI views", "Admin UI", "Production code"],
+    images: [
+      {
+        src: "/images/hitract-dashboard.webp",
+        alt: "Hitract admin dashboard with KPI views",
+      },
+      {
+        src: "/images/hitract-cribs.webp",
+        alt: "Hitract admin view for rental listings",
+      },
+    ],
   },
   {
     id: "home-screen",
