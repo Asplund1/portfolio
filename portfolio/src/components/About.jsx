@@ -1,9 +1,9 @@
 function About() {
   return (
     <section className="section about" id="about">
-      <div>
+      <div className="about-heading">
         <p className="eyebrow">About</p>
-        <h2>I like understanding the whole product.</h2>
+        <h2>Fullstack development with the whole product in mind.</h2>
       </div>
 
       <div className="about-copy">
