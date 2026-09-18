@@ -96,11 +96,11 @@ main {
 
 .hero {
   min-height: calc(100vh - 84px);
-  max-width: 900px;
+  max-width: 960px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 96px 0 112px;
+  padding: 88px 0 104px;
 }
 
 .eyebrow {
@@ -113,22 +113,23 @@ main {
 }
 
 .hero h1 {
-  max-width: 760px;
+  max-width: none;
   font-family: "Manrope", sans-serif;
-  font-size: clamp(3rem, 5.6vw, 5.3rem);
-  line-height: 1;
-  letter-spacing: -0.055em;
+  font-size: clamp(3.2rem, 5vw, 4.8rem);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
 }
 
 .hero-copy {
-  max-width: 700px;
-  margin-top: 28px;
+  max-width: 760px;
+  margin-top: 26px;
   color: var(--muted);
-  font-size: clamp(1.05rem, 1.6vw, 1.28rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
+  line-height: 1.6;
 }
 
 .hero-actions {
-  margin-top: 34px;
+  margin-top: 32px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -177,7 +178,7 @@ main {
 }
 
 .hero-meta {
-  margin-top: 40px;
+  margin-top: 36px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -647,11 +648,17 @@ main {
 
   .hero {
     min-height: auto;
-    padding: 86px 0 88px;
+    padding: 78px 0 84px;
   }
 
   .hero h1 {
-    font-size: clamp(2.8rem, 13vw, 4rem);
+    font-size: clamp(2.7rem, 12vw, 3.8rem);
+    line-height: 1.03;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    line-height: 1.65;
   }
 
   .text-link {
