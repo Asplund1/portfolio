@@ -1,4 +1,23 @@
 function ProjectVisual({ project }) {
+  if (project.images?.length) {
+    return (
+      <div className="project-visual project-visual-images">
+        <div className="project-image-stack">
+          {project.images.map((image, index) => (
+            <figure className="project-preview" key={image.src}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                loading="lazy"
+                className={index === 0 ? "project-preview-primary" : ""}
+              />
+            </figure>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="project-visual" aria-hidden="true">
       <div className="visual-window">
