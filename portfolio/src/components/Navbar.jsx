@@ -1,17 +1,19 @@
+import { Brand, Links, Nav } from "../styles/NavbarStyles";
+
 function Navbar() {
   return (
-    <nav className="navbar" aria-label="Main navigation">
-      <a className="brand" href="#top">
+    <Nav aria-label="Main navigation">
+      <Brand href="#top">
         Andreas Asplund
-      </a>
+      </Brand>
 
-      <div className="nav-links">
+      <Links>
         <a href="#work">Work</a>
         <a href="#experience">Experience</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-      </div>
-    </nav>
+      </Links>
+    </Nav>
   );
 }
 

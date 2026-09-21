@@ -5,11 +5,15 @@ import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import GlobalStyles from "./styles/GlobalStyles";
+import { Footer, Shell } from "./styles/layout";
 
 function App() {
   return (
     <>
-      <div className="site-shell">
+      <>
+        <GlobalStyles />
+        <Shell>
         <Navbar />
 
         <main>
@@ -21,11 +25,12 @@ function App() {
           <Contact />
         </main>
 
-        <footer className="footer">
+        <Footer>
           <span>Andreas Asplund</span>
           <span>Fullstack Developer · Stockholm</span>
-        </footer>
-      </div>
+        </Footer>
+        </Shell>
+      </>
     </>
   );
 }

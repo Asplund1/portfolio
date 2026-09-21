@@ -1,3 +1,7 @@
+import { Eyebrow } from "../styles/layout";
+import { Description, Heading, Item, List, Period, Role, Company, Section } from "../styles/ExperienceStyles";
+import { HeadingTitle } from "../styles/SectionStyles";
+
 const experiences = [
   {
     role: "Fullstack Developer Intern",
@@ -17,26 +21,26 @@ const experiences = [
 
 function Experience() {
   return (
-    <section className="section" id="experience">
-      <div className="section-heading compact">
-        <p className="eyebrow">Work and study</p>
-        <h2>Experience</h2>
-      </div>
+    <Section id="experience">
+      <Heading compact>
+        <Eyebrow>Work and study</Eyebrow>
+        <HeadingTitle>Experience</HeadingTitle>
+      </Heading>
 
-      <div className="experience-list">
+      <List>
         {experiences.map((experience) => (
-          <article className="experience-item" key={experience.company}>
+          <Item key={experience.company}>
             <div>
-              <p className="experience-period">{experience.period}</p>
-              <h3>{experience.role}</h3>
-              <p className="experience-company">{experience.company}</p>
+              <Period>{experience.period}</Period>
+              <Role>{experience.role}</Role>
+              <Company>{experience.company}</Company>
             </div>
 
-            <p className="experience-description">{experience.description}</p>
-          </article>
+            <Description>{experience.description}</Description>
+          </Item>
         ))}
-      </div>
-    </section>
+      </List>
+    </Section>
   );
 }
 

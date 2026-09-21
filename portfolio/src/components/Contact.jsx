@@ -1,37 +1,37 @@
+import { ContactSection, DarkButton, Eyebrow, LightButton, Link, Links } from "../styles/ContactStyles";
+
 function Contact() {
   return (
-    <section className="contact" id="contact">
-      <p className="eyebrow">Say hello</p>
+    <ContactSection id="contact">
+      <Eyebrow>Say hello</Eyebrow>
       <h2>Have a project in mind?</h2>
       <p>
         I am open to fullstack, frontend and software development roles. Email
         is the easiest way to reach me.
       </p>
 
-      <div className="contact-links">
-        <a className="button button-primary" href="mailto:asplund_andreas@outlook.com">
+      <Links>
+        <LightButton href="mailto:asplund_andreas@outlook.com">
           Get in touch
-        </a>
+        </LightButton>
 
-        <a
-          className="button button-secondary"
+        <DarkButton
           href="https://www.linkedin.com/in/andreas-asplund-558bab32a/"
           target="_blank"
           rel="noreferrer"
         >
           LinkedIn
-        </a>
+        </DarkButton>
 
-        <a
-          className="text-link"
+        <Link
           href="https://github.com/Asplund1"
           target="_blank"
           rel="noreferrer"
         >
           GitHub ↗
-        </a>
-      </div>
-    </section>
+        </Link>
+      </Links>
+    </ContactSection>
   );
 }
 

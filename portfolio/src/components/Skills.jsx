@@ -1,3 +1,7 @@
+import { Eyebrow, Tags } from "../styles/layout";
+import { Grid, Group, Heading, Section } from "../styles/SkillsStyles";
+import { HeadingTitle } from "../styles/SectionStyles";
+
 const skillGroups = [
   {
     title: "Frontend",
@@ -15,25 +19,25 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section className="section skills-section" aria-labelledby="skills-title">
-      <div className="section-heading compact">
-        <p className="eyebrow">The toolbox</p>
-        <h2 id="skills-title">What I use</h2>
-      </div>
+    <Section aria-labelledby="skills-title">
+      <Heading compact>
+        <Eyebrow>The toolbox</Eyebrow>
+        <HeadingTitle id="skills-title">What I use</HeadingTitle>
+      </Heading>
 
-      <div className="skill-grid">
-        {skillGroups.map((group) => (
-          <div className="skill-group" key={group.title}>
+      <Grid>
+        {skillGroups.map((group, index) => (
+          <Group $index={index} key={group.title}>
             <h3>{group.title}</h3>
-            <div className="skill-list">
+            <Tags>
               {group.skills.map((skill) => (
                 <span key={skill}>{skill}</span>
               ))}
-            </div>
-          </div>
+            </Tags>
+          </Group>
         ))}
-      </div>
-    </section>
+      </Grid>
+    </Section>
   );
 }
 

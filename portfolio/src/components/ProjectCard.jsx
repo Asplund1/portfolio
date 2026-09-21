@@ -1,72 +1,72 @@
+import { Eyebrow, Tags } from "../styles/layout";
+import { CardTags, Contribution, Details, Feature, ImageStack, ImageVisual, Kicker, Note, Number, Preview, ProjectLink, Summary, Title, Visual, VisualContent, VisualItems, Window, WindowBar } from "../styles/ProjectCardStyles";
+
 function ProjectVisual({ project }) {
   if (project.images?.length) {
     return (
-      <div className="project-visual project-visual-images">
-        <div className="project-image-stack">
-          {project.images.map((image, index) => (
-            <figure className="project-preview" key={image.src}>
+      <ImageVisual>
+        <ImageStack>
+          {project.images.map((image) => (
+            <Preview key={image.src}>
               <img
                 src={image.src}
                 alt={image.alt}
                 loading="lazy"
-                className={index === 0 ? "project-preview-primary" : ""}
               />
-            </figure>
+            </Preview>
           ))}
-        </div>
-      </div>
+        </ImageStack>
+      </ImageVisual>
     );
   }
 
   return (
-    <div className="project-visual" aria-hidden="true">
-      <div className="visual-window">
-        <div className="visual-window-bar">
+    <Visual aria-hidden="true">
+      <Window>
+        <WindowBar>
           <span />
           <span />
           <span />
-        </div>
+        </WindowBar>
 
-        <div className="visual-content">
+        <VisualContent>
           <p>{project.visualLabel}</p>
           <strong>{project.title}</strong>
 
-          <div className="visual-items">
+          <VisualItems>
             {project.visualItems.map((item) => (
               <span key={item}>{item}</span>
             ))}
-          </div>
-        </div>
-      </div>
-    </div>
+          </VisualItems>
+        </VisualContent>
+      </Window>
+    </Visual>
   );
 }
 
 function ProjectCard({ project, index }) {
   return (
-    <article
-      className={`project-feature ${index % 2 === 1 ? "project-feature-reverse" : ""}`}
-    >
+    <Feature $reverse={index % 2 === 1}>
       <ProjectVisual project={project} />
 
-      <div className="project-details">
-        <div className="project-kicker">
-          <span className="project-number">0{index + 1}</span>
-          <p className="eyebrow">{project.eyebrow}</p>
-        </div>
-        <h3>{project.title}</h3>
-        <p className="project-summary">{project.summary}</p>
-        <p className="project-contribution">{project.contribution}</p>
+      <Details>
+        <Kicker>
+          <Number>0{index + 1}</Number>
+          <Eyebrow>{project.eyebrow}</Eyebrow>
+        </Kicker>
+        <Title>{project.title}</Title>
+        <Summary>{project.summary}</Summary>
+        <Contribution>{project.contribution}</Contribution>
 
-        <div className="technologies" aria-label="Technologies used">
+        <CardTags aria-label="Technologies used"><Tags>
           {project.technologies.map((technology) => (
             <span key={technology}>{technology}</span>
           ))}
-        </div>
+        </Tags></CardTags>
 
         {project.githubUrl ? (
           <a
-            className="project-link"
+            as={ProjectLink}
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
@@ -74,10 +74,10 @@ function ProjectCard({ project, index }) {
             View code ↗
           </a>
         ) : (
-          <p className="project-note">Private or company-owned code</p>
+            <Note>Private or company-owned code</Note>
         )}
-      </div>
-    </article>
+      </Details>
+    </Feature>
   );
 }
 

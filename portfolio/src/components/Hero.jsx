@@ -1,39 +1,41 @@
+import { Eyebrow, PrimaryButton, TextLink } from "../styles/layout";
+import { Actions, Aside, AsideLabel, Copy, HeroSection, Intro, Meta, StatusDot, Title } from "../styles/HeroStyles";
+
 function Hero() {
   return (
-    <header className="hero" id="top">
-      <div className="hero-intro">
-        <p className="eyebrow">Andreas Asplund · Stockholm</p>
-        <h1>Fullstack developer for the web.</h1>
-        <p className="hero-copy">
+    <HeroSection id="top">
+      <Intro>
+        <Eyebrow>Andreas Asplund · Stockholm</Eyebrow>
+        <Title>Fullstack developer for the web.</Title>
+        <Copy>
           I like working on the parts people use and the parts they never see:
           interfaces, APIs, databases and the small decisions in between.
-        </p>
+        </Copy>
 
-        <div className="hero-actions">
-          <a className="button button-primary" href="#work">
+        <Actions>
+          <PrimaryButton href="#work">
             Look at my work
-          </a>
+          </PrimaryButton>
 
-          <a
-            className="text-link"
+          <TextLink
             href="https://github.com/Asplund1"
             target="_blank"
             rel="noreferrer"
           >
             GitHub ↗
-          </a>
-        </div>
-      </div>
+          </TextLink>
+        </Actions>
+      </Intro>
 
-      <div className="hero-aside">
-        <p className="hero-aside-label">Currently</p>
+      <Aside>
+        <AsideLabel>Currently</AsideLabel>
         <p>Looking for a place to keep building.</p>
-        <div className="hero-meta" aria-label="Current status">
-          <span className="status-dot" aria-hidden="true" />
+        <Meta aria-label="Current status">
+          <StatusDot aria-hidden="true" />
           Open to development roles
-        </div>
-      </div>
-    </header>
+        </Meta>
+      </Aside>
+    </HeroSection>
   );
 }
 
