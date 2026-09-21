@@ -18,9 +18,9 @@ const experiences = [
 function Experience() {
   return (
     <section className="section" id="experience">
-      <div className="section-heading">
-        <p className="eyebrow">Experience</p>
-        <h2>Practical development in real projects.</h2>
+      <div className="section-heading compact">
+        <p className="eyebrow">Work and study</p>
+        <h2>Experience</h2>
       </div>
 
       <div className="experience-list">

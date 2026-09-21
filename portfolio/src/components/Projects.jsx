@@ -5,11 +5,11 @@ function Projects() {
   return (
     <section className="section" id="work">
       <div className="section-heading">
-        <p className="eyebrow">Selected work</p>
-        <h2>Projects that show how I work.</h2>
+        <p className="eyebrow">A few things I have built</p>
+        <h2>Projects</h2>
         <p>
-          A mix of company experience, thesis work and independent development
-          across frontend, backend, APIs and databases.
+          From a production planning tool to a Raspberry Pi dashboard. These
+          are the projects that best show how I approach a problem.
         </p>
       </div>
 
