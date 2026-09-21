@@ -74,7 +74,7 @@ function ProjectCard({ project, index }) {
             View code ↗
           </a>
         ) : (
-            <Note>Private or company-owned code</Note>
+          <Note>Private or company-owned code</Note>
         )}
       </Details>
     </Feature>

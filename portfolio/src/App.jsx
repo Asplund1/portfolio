@@ -14,21 +14,21 @@ function App() {
       <>
         <GlobalStyles />
         <Shell>
-        <Navbar />
+          <Navbar />
 
-        <main>
-          <Hero />
-          <Projects />
-          <Experience />
-          <Skills />
-          <About />
-          <Contact />
-        </main>
+          <main>
+            <Hero />
+            <Projects />
+            <Experience />
+            <Skills />
+            <About />
+            <Contact />
+          </main>
 
-        <Footer>
-          <span>Andreas Asplund</span>
-          <span>Fullstack Developer · Stockholm</span>
-        </Footer>
+          <Footer>
+            <span>Andreas Asplund</span>
+            <span>Fullstack Developer · Stockholm</span>
+          </Footer>
         </Shell>
       </>
     </>
