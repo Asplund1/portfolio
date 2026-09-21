@@ -50,27 +50,14 @@ function ProjectCard({ project, index }) {
       <ProjectVisual project={project} />
 
       <div className="project-details">
-<<<<<<< HEAD
-        <p className="eyebrow">{project.eyebrow}</p>
-=======
         <div className="project-kicker">
           <span className="project-number">0{index + 1}</span>
           <p className="eyebrow">{project.eyebrow}</p>
         </div>
->>>>>>> portfolio-redesign
         <h3>{project.title}</h3>
         <p className="project-summary">{project.summary}</p>
         <p className="project-contribution">{project.contribution}</p>
 
-<<<<<<< HEAD
-        <ul className="project-highlights">
-          {project.highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
-          ))}
-        </ul>
-
-=======
->>>>>>> portfolio-redesign
         <div className="technologies" aria-label="Technologies used">
           {project.technologies.map((technology) => (
             <span key={technology}>{technology}</span>
@@ -84,11 +71,7 @@ function ProjectCard({ project, index }) {
             target="_blank"
             rel="noreferrer"
           >
-<<<<<<< HEAD
-            View on GitHub ↗
-=======
             View code ↗
->>>>>>> portfolio-redesign
           </a>
         ) : (
           <p className="project-note">Private or company-owned code</p>

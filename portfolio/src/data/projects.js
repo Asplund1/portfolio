@@ -4,15 +4,9 @@ export const featuredProjects = [
     eyebrow: "Thesis project · Karolinska",
     title: "Production Planning & Dimensioning Tool",
     summary:
-<<<<<<< HEAD
-      "A fullstack application developed to support production planning and resource dimensioning in a healthcare context.",
-    contribution:
-      "I worked from real stakeholder requirements and built functionality across the interface, application logic and database.",
-=======
       "A fullstack application prototype i developed alone to support production planning and resource dimensioning in a healthcare context.",
     contribution:
       "I worked from real requirements and built functionality across the interface, application logic and database.",
->>>>>>> portfolio-redesign
     highlights: [
       "Translated business needs into user flows and working features",
       "Built database-driven functionality for planning and resource needs",
@@ -36,11 +30,7 @@ export const featuredProjects = [
     eyebrow: "Internship · Hitract",
     title: "Admin Platform & KPI Views",
     summary:
-<<<<<<< HEAD
-      "Administrative interfaces developed during a six-month internship in an existing production codebase.",
-=======
       "Administrative interfaces developed during a six-month internship at Hitract.",
->>>>>>> portfolio-redesign
     contribution:
       "I built and improved admin functionality, worked with KPI-driven views and translated design and product requirements into maintainable frontend code.",
     highlights: [
