@@ -17,8 +17,13 @@ function Skills() {
   return (
     <section className="section skills-section" aria-labelledby="skills-title">
       <div className="section-heading compact">
+<<<<<<< HEAD
         <p className="eyebrow">Technologies</p>
         <h2 id="skills-title">Tools I work with.</h2>
+=======
+        <p className="eyebrow">The toolbox</p>
+        <h2 id="skills-title">What I use</h2>
+>>>>>>> portfolio-redesign
       </div>
 
       <div className="skill-grid">
