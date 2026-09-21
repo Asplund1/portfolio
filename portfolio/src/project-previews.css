@@ -2,7 +2,7 @@
    This file only overrides the image preview layout from index.css. */
 
 .project-visual-images {
-  min-height: 560px;
+  min-height: 480px;
   padding: clamp(18px, 2.6vw, 34px);
 }
 
@@ -45,7 +45,7 @@
 
 @media (max-width: 900px) {
   .project-visual-images {
-    min-height: 480px;
+    min-height: 410px;
   }
 
   .project-preview:first-child img {
