@@ -1,0 +1,43 @@
+name: Refresh dependencies (review branch)
+
+on:
+  push:
+    branches:
+      - chore/secure-dependencies-2026-10-28
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    if: "!contains(github.event.head_commit.message, 'chore: refresh dependency versions and lockfiles')"
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Update direct dependencies within current major versions
+        run: node .github/scripts/refresh-dependencies.mjs portfolio/package.json
+      - name: Refresh lockfile in portfolio
+        run: cd portfolio && npm update --package-lock-only --ignore-scripts --no-fund
+      - name: Commit updated manifests and lockfiles
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add portfolio/package.json portfolio/package-lock.json
+          if git diff --cached --quiet; then
+            echo "No updates needed."
+            exit 0
+          fi
+          git commit -m "chore: refresh dependency versions and lockfiles"
+          git push origin HEAD:"${GITHUB_REF_NAME}"
+      - name: Install portfolio
+        run: cd portfolio && npm ci --no-fund
+      - name: Check cd portfolio && npm run lint
+        run: cd portfolio && npm run lint
+      - name: Check cd portfolio && npm run build
+        run: cd portfolio && npm run build
+      - name: Audit production portfolio
+        run: cd portfolio && npm audit --omit=dev --audit-level=high
